@@ -1,0 +1,19 @@
+PUSH GUIDE — publishing bukkit-revisited to GitHub
+=====================================================
+1. On github.com, create a NEW repository named "bukkit-revisited".
+   Public. Do NOT tick "Add README / .gitignore / license" (this folder
+   already has them — GitHub would create conflicts).
+2. In a terminal inside THIS folder (bukkit-revisited):
+     git init -b main
+     git add .
+     git commit -m "Fork Bukkit API (GPLv3, credits preserved) + audit Round 1 scaffold"
+     git remote add origin https://github.com/smallrug2/bukkit-revisited.git
+     git push -u origin main
+3. On the repo page, confirm LICENCE.txt, CONTRIBUTING.md and
+   README-ORIGINAL.md are present — those are the credit chain.
+4. Apply the resolveObject comment fix as its own commit (file already
+   fixed in this tree — commit it separately for clean history):
+     git log --oneline  (to see), then keep future fixes one-commit-each.
+5. Optional: About box -> add topic tags (minecraft, bukkit, api,
+   security-audit) + link back to https://github.com/Bukkit/Bukkit
+   as the upstream source.
